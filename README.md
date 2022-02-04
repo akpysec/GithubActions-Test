@@ -1,0 +1,1 @@
+Simple Crypto Bot for testing GitHub Actions
