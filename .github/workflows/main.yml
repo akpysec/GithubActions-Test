@@ -20,26 +20,26 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
+      # Listing working directory
+      - name: Listing working directory
         run: ls -la
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
+      # Installing script requirements
+      - name: Installing script requirements
         run: pip install -r requirements.txt
         
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
+      # Running repository
+      - name: Running repository
         run: python main.py
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
+      # Listing working directory
+      - name: Listing working directory
         run: ls -la
 
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      # Reading output SQL database 
+      - name: Reading output SQL database
         run: |
           sqlite3
           .open "BITTREX_TICKER.sqlite"
-          select * from BITTREX_TICKER.sqlite
+          select * from BITTREX
         
