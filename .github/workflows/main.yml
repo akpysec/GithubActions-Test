@@ -1,6 +1,9 @@
 # This is a basic workflow to help you get started with Actions
 
 name: testing
+env:
+  APPLICATION_NAME    : "Simple-Bot"
+  SHA_DIGEST : "${{ github.sha }}"
 
 # Controls when the workflow will run
 on:
@@ -20,6 +23,12 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
+      # Printing info message
+      - name: Printing Info
+        run:  |
+          echo "Appication name: ${{ env.APPLICATION_NAME }}"
+          echo "Commit digest: ${{ env.SHA_DIGEST }}"
+
       # Installing script requirements & running repository
       - name: Installing script requirements
         run: |
@@ -28,7 +37,6 @@ jobs:
 
       # Reading output SQL database 
       - name: Reading output SQL database
-        run: |
-          python db_reader.py
+        run:  python db_reader.py
 
         

@@ -1,2 +1,5 @@
 # Ignoring local testing DB
 BITTREX_TICKER.sqlite
+
+# Ignore test YAML file
+test.yaml
