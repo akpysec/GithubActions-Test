@@ -39,7 +39,7 @@ jobs:
       # Reading output SQL database 
       - name: Reading output SQL database
         run: |
-          sqlite3
-          .open "BITTREX_TICKER.sqlite"
-          select * from BITTREX
+          ls -la
+          python db_reader.py
+
         
