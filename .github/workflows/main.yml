@@ -20,26 +20,15 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      # Listing working directory
-      - name: Listing working directory
-        run: ls -la
-
-      # Installing script requirements
+      # Installing script requirements & running repository
       - name: Installing script requirements
-        run: pip install -r requirements.txt
-        
-      # Running repository
-      - name: Running repository
-        run: python main.py
-
-      # Listing working directory
-      - name: Listing working directory
-        run: ls -la
+        run: |
+        pip install -r requirements.txt
+        python main.py
 
       # Reading output SQL database 
       - name: Reading output SQL database
         run: |
-          ls -la
           python db_reader.py
 
         
