@@ -23,8 +23,8 @@ jobs:
       # Installing script requirements & running repository
       - name: Installing script requirements
         run: |
-        pip install -r requirements.txt
-        python main.py
+          pip install -r requirements.txt
+          python main.py
 
       # Reading output SQL database 
       - name: Reading output SQL database
